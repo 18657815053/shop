@@ -14,7 +14,7 @@ use think\Route;
 //Route::rule('路由表达式','路由地址','请求类型','路由参数(数组)','变量规则(数组)');
 //请求类型 GET POST DELETE PUT *
 //路由参数 参考官方文档
-
+Route::rule('/', 'api/Index/index');
 //Route::get('test', 'sample/Test/test');
 //version 版本号
 Route::rule('api/:version/banner/:id', 'api/:version.Banner/getBanner', 'get');//轮播图
