@@ -15,7 +15,7 @@ use think\Route;
 //请求类型 GET POST DELETE PUT *
 //路由参数 参考官方文档
 Route::rule('/', 'api/Index/index');
-//Route::get('test', 'sample/Test/test');
+/*Route::get('test', 'sample/Test/test');*/
 //version 版本号
 Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');//轮播图
 
