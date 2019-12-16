@@ -17,20 +17,20 @@ use think\Route;
 Route::rule('/', 'api/Index/index');
 //Route::get('test', 'sample/Test/test');
 //version 版本号
-Route::rule('api/:version/banner/:id', 'api/:version.Banner/getBanner', 'get');//轮播图
+Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');//轮播图
 
-Route::rule('api/:version/theme', 'api/:version.Theme/getSimpleList', 'get');//专题列表
-Route::rule('api/:version/theme/:id', 'api/:version.Theme/getComplexOne', 'get');//一个专题的所有信息
+Route::get('api/:version/theme', 'api/:version.Theme/getSimpleList');//专题列表
+Route::get('api/:version/theme/:id', 'api/:version.Theme/getComplexOne');//一个专题的所有信息
 
-Route::rule('api/:version/product/recent', 'api/:version.Product/getRecent', 'get');//获取最近新品
-Route::rule('api/:version/product/by_category/:id', 'api/:version.Product/getAllInCategory', 'get');//根据分类获取商品
-Route::rule('api/:version/product/:id', 'api/:version.Product/getOne', 'get', '', ['id' => '\d+']);//获取一条商品信息
+Route::get('api/:version/product/recent', 'api/:version.Product/getRecent');//获取最近新品
+Route::get('api/:version/product/by_category/:id', 'api/:version.Product/getAllInCategory');//根据分类获取商品
+Route::get('api/:version/product/:id', 'api/:version.Product/getOne', [], ['id' => '\d+']);//获取一条商品信息
 
 
-Route::rule('api/:version/category/all', 'api/:version.Category/getAllCategory', 'get');//所有分类
+Route::get('api/:version/category/all', 'api/:version.Category/getAllCategory');//所有分类
 
-Route::rule('api/:version/token/user', 'api/:version.Token/getToken', 'post');//获取Token令牌
+Route::post('api/:version/token/user', 'api/:version.Token/getToken');//获取Token令牌
 
-Route::rule('api/:version/address', 'api/:version.Address/createOrUpdateAddress', 'post');//新增或修改用户地址
+Route::post('api/:version/address', 'api/:version.Address/createOrUpdateAddress');//新增或修改用户地址
 
-Route::rule('api/:version/order', 'api/:version.Order/placeOrder', 'post');//用户下单
+Route::post('api/:version/order', 'api/:version.Order/placeOrder');//用户下单
